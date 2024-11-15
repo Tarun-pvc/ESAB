@@ -4,4 +4,6 @@ Accepted at WHISPERS 2024.
 
 ---
 
-Currently Under Construction 
+This repo will contain some reading material and code that could not be included in the paper. 
+
+Currently Under Construction. Please check back later. 
