@@ -25,7 +25,7 @@ class gradientLoss(nn.Module):
         if epoch == 0: 
             return self.mse_lambda*mse + self.gradient_lambda*slope_loss
         else:
-            # This part is inspired by https://github.com/Liyong8490/HSI-SR-GDRRN
+            # This part is inspired by https://github.com/Liyong8490/HSI-SR-GDRRN. If it doesn't work as expected, try changing the weights or making it epoch-independent. 
             norm = self.mse_lambda + self.gradient_lambda * 0.1 **(epoch//10)
             lamd_slope = self.gradient_lambda * 0.1 ** (epoch // 10)
             total_loss = self.mse_lambda/norm * mse + lamd_slope/norm * slope_loss
