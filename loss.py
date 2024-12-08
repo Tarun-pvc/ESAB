@@ -11,7 +11,7 @@ class gradientLoss(nn.Module):
 
         mse = F.mse_loss(pred, gt) / (self.N*2)
 
-        pred_diff = torch.diff(pred, dim = 1)
+        pred_diff = torch.diff(pred, dim =  1)
         gt_diff = torch.diff(gt, dim = 1)
 
         pred_diff_flat = pred_diff.view(-1, pred_diff.shape[1])
@@ -22,7 +22,6 @@ class gradientLoss(nn.Module):
         slope_loss = 1-cosine_sim
         slope_loss = slope_loss.mean()/self.N
 
-        
         if epoch == 0: 
             return self.mse_lambda*mse + self.gradient_lambda*slope_loss
         else:
