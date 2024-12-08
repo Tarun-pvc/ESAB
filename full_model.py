@@ -1,5 +1,8 @@
 """
-Please note that code cleaning and standardization has not been done yet. A lot of this code is hence inaccurately named, and it might not be functional. Some comments have been put in for understanding. The full, working code will be put up shortly. Until then, this code might give a good indication of what has been implemented.  
+Please note that code cleaning and standardization has not been done yet. A lot of this code is hence inaccurately named, and is not functional. 
+Some comments have been put in for understanding. 
+The full, working code will be put up shortly; Until then, this code might give a good indication of what has been implemented.  
+Please reach out and raise an issue. Conversation and questions are appreciated.   
 """
 
 
@@ -541,6 +544,7 @@ class SFEB(nn.Module):
         final_output = self.trunk(concatenated_output)
         return final_output
 
+# The base code is the same as my other repository, github.com/Tarun-pvc/GMOD . Hence, the same name. 
 class GMOD(nn.Module):
     def __init__(self, num_bands, upscale_factor, args, use_nonlocal = False, use_ECA = False):
         super().__init__()
